@@ -1,0 +1,63 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-direction: column;
+  grid-area: header;
+}
+.menu {
+  display: flex;
+  gap: 1rem;
+  font-weight: 700;
+  }
+  
+.menu a {
+  text-decoration: none;
+  color: darksalmon;
+  &:hover {
+    color: dodgerblue;
+    cursor: pointer;
+  }
+}
+
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat (2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  grid-area: main;
+    }
+
+
+.cards {
+    background-color: rgb(52, 206, 137);
+    display: grid;
+    grid-area: aside;
+    margin-right: 30px;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: rgb(255, 248, 188);
+}
